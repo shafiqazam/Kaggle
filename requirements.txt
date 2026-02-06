@@ -5,3 +5,4 @@ scikit-learn
 xgboost
 scikit-learn
 seaborn
+tensorflow
