@@ -94,6 +94,13 @@ def submit(project: Project, file: Path, message: str, assume_yes: bool = False)
     return True
 
 
+def scores(project: Project) -> None:
+    """Show this competition's submissions and leaderboard scores from Kaggle."""
+    if project.kind != "competition":
+        raise ValueError("Only competition projects have submissions.")
+    _kaggle("competitions", "submissions", "-c", project.kaggle_ref)
+
+
 def list_projects() -> None:
     rows = []
     for project in all_projects():
@@ -128,6 +135,7 @@ def build_parser() -> argparse.ArgumentParser:
     send.add_argument("-m", "--message", required=True)
     send.add_argument("--yes", action="store_true", help="skip the confirmation prompt")
 
+    commands.add_parser("scores", help="show Kaggle submissions for the current project")
     commands.add_parser("list", help="list projects and their best CV scores")
     return parser
 
@@ -144,6 +152,8 @@ def main(argv: list[str] | None = None) -> int:
             download(load_project())
         elif args.command == "submit":
             submit(load_project(), args.file, args.message, args.yes)
+        elif args.command == "scores":
+            scores(load_project())
         elif args.command == "list":
             list_projects()
     except (ValueError, OSError, RuntimeError, subprocess.CalledProcessError) as error:
