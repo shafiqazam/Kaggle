@@ -1,5 +1,3 @@
-import os
-os.environ['KAGGLE_USERNAME'] = 'Shafiq Azam'
-os.environ['KAGGLE_KEY'] = 'REMOVED_KAGGLE_TOKEN'
-# Then import kaggle or use the API
+# Kaggle credentials come from ~/.kaggle or the KAGGLE_* environment variables.
+# Never hardcode them here.
 from kaggle import api
