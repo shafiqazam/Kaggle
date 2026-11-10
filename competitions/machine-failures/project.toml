@@ -1,0 +1,6 @@
+slug = "machine-failures"
+kind = "competition"
+kaggle_ref = "playground-series-s3e17"
+task = "binary"
+metric = "roc_auc"
+data_dir = "."

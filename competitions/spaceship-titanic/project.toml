@@ -1,0 +1,6 @@
+slug = "spaceship-titanic"
+kind = "competition"
+kaggle_ref = "spaceship-titanic"
+task = "binary"
+metric = "accuracy"
+data_dir = "."

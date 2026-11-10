@@ -1,0 +1,12 @@
+slug = "__SLUG__"
+kind = "__KIND__"
+kaggle_ref = "__REF__"
+
+# task: binary or regression
+task = "__TASK__"
+# metric: accuracy, f1, roc_auc, log_loss, mae, rmse, or rmsle
+metric = "__METRIC__"
+
+# target and id_column are read from the sample submission when left empty.
+target = ""
+id_column = ""

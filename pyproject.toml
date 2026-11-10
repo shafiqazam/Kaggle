@@ -17,6 +17,7 @@ dependencies = [
 ]
 
 [dependency-groups]
+dev = ["pytest==9.0.2"]
 # Only needed for "AI Agents Intensive Course Google". Install with: uv sync --group agents
 agents = [
     "duckduckgo-search==8.1.1",
@@ -30,5 +31,15 @@ agents = [
     "python-dotenv==1.0.1",
 ]
 
-[tool.uv]
-package = false
+[project.scripts]
+kk = "kagglekit.cli:main"
+
+[build-system]
+requires = ["uv_build>=0.11.11,<0.12"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "kagglekit"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

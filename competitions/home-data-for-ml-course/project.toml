@@ -1,0 +1,6 @@
+slug = "home-data-for-ml-course"
+kind = "competition"
+kaggle_ref = "home-data-for-ml-course"
+task = "regression"
+metric = "rmsle"
+data_dir = "."

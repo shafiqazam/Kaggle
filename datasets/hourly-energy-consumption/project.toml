@@ -1,0 +1,4 @@
+slug = "hourly-energy-consumption"
+kind = "dataset"
+kaggle_ref = "robikscube/hourly-energy-consumption"
+data_dir = "."

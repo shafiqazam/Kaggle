@@ -5,6 +5,7 @@
 .env.*
 !.env.example
 kaggle.json
+access_token*
 
 # Machine-specific
 .venv/
@@ -14,4 +15,11 @@ __pycache__/
 .ipynb_checkpoints/
 
 # Separate upstream clone with its own Git history
-AI Agents Intensive Course Google/lca-langchainV1-essentials/
+learning/ai-agents-intensive/lca-langchainV1-essentials/
+
+# Project artifacts: downloadable or regenerable
+competitions/*/data/
+datasets/*/data/
+**/submissions/*.csv
+**/models/
+catboost_info/
